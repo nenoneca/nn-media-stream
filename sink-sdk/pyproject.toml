@@ -1,0 +1,23 @@
+[project]
+name = "nn-media-sink"
+version = "0.1.0"
+description = "nn media streaming — sink SDK (decrypt device streams + WebRTC re-publish; runs in the hub)"
+requires-python = ">=3.10"
+dependencies = [
+    "cryptography>=42.0",
+]
+
+# The WebRTC gateway needs these; install with: pip install nn-media-sink[webrtc]
+[project.optional-dependencies]
+webrtc = [
+    "aiortc>=1.9",
+    "av>=11",
+    "aiohttp>=3.9",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["nn_media_sink"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

@@ -1,0 +1,10 @@
+# nn media streaming service (video_service.py) — Python dependencies.
+#
+# System packages (NOT pip): python3-gi + GStreamer 1.0 with the tee, appsink,
+# queue, rtph264pay and udpsink elements.
+#
+# pip:
+aiohttp
+numpy
+scipy
+av        # PyAV — H.264 -> YUV decode for the motion-detection branch
